@@ -1,0 +1,53 @@
+{
+  "customers": [
+    {
+      "name": "Geiz Myokoin",
+      "balance": 23210,
+      "password": "Lnbv",
+      "interest": 1.07,
+      "last login": "2019-10-18"
+    },
+    {
+      "name": "Sougo Tokiwa",
+      "balance": 95800,
+      "password": "Jvyy or gur Xvat",
+      "interest": 1.03,
+      "last login": "2019-10-18"
+    },
+    {
+      "name": "Citrine Piasora",
+      "balance": 734561,
+      "password": "Jbm",
+      "interest": 1.03,
+      "last login": "2019-10-18"
+    },
+    {
+      "name": "Rentaro Kagura",
+      "balance": 1841368,
+      "password": "FuvabovXramna",
+      "interest": 1.03,
+      "last login": "2019-10-18"
+    },
+    {
+      "name": "Joseph Joestar",
+      "balance": 157894,
+      "password": "2035",
+      "interest": 1.03,
+      "last login": "2019-10-18"
+    },
+    {
+      "name": "Julius Visconti",
+      "balance": 6915,
+      "password": "Oybbq",
+      "interest": 1.03,
+      "last login": "2019-10-18"
+    },
+    {
+      "name": "Ryoutaro Nogami",
+      "balance": 6950,
+      "password": "Vznwva",
+      "interest": 1.03,
+      "last login": "2019-10-18"
+    }
+  ]
+}

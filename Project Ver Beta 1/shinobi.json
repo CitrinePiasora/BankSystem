@@ -1,0 +1,25 @@
+{
+  "customers": [
+    {
+      "name": "Citrine Piasora",
+      "balance": 5470,
+      "password": "$2b$12$e7AsmqIBptXfFcm/QGfpFOOagcpFw9zXGYW7dk7SuR2/ZaEx5mHqC",
+      "interest": 1.003,
+      "last login": "2019-10-21"
+    },
+    {
+      "name": "Geiz Myokoin",
+      "balance": 5000,
+      "password": "$2b$12$e7AsmqIBptXfFcm/QGfpFO/qDRIJjRvflWGTP8NxPVQQfUTFWrEki",
+      "interest": 1.003,
+      "last login": "2019-10-21"
+    },
+    {
+      "name": "Joseph Joestar",
+      "balance": 5000,
+      "password": "$2b$12$e7AsmqIBptXfFcm/QGfpFOGdk1BwI4/k9.UxSMEo45AXTisZQ66gi",
+      "interest": 1.003,
+      "last login": "2019-10-21"
+    }
+  ]
+}
