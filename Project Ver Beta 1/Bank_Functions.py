@@ -235,7 +235,7 @@ def NameLogin(lists, admin=False):
                 # false is returned so that the new user loop doesn't trigger
                 return name, False
             else:
-                # true is returned so that a new user will be created
+               # true is returned so that login process begins
                 return name, True
         else:
             if admin:
