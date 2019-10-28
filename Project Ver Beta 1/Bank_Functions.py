@@ -9,9 +9,12 @@ def checkName(i, name):
 
 
 def checkPassword(i, pword):
-    # uses bcrypt's password checker to see if the plain text password (converted into bytes)
-    # matches the hashed password stored in the json (converted back into bytes)
-    return bcrypt.checkpw(pword.encode(), i["password"].encode())
+    if pword == "blocked":
+        return (True if i["password"] == pword else False)
+    else:
+        # uses bcrypt's password checker to see if the plain text password (converted into bytes)
+        # matches the hashed password stored in the json (converted back into bytes)
+        return bcrypt.checkpw(pword.encode(), i["password"].encode())
 
 
 def confirmer():
