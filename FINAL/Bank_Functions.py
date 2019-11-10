@@ -95,12 +95,10 @@ def acctype(admin=False, guest=False):
         logintype = str(input("Login as an:\n1. User\n2. Admin\n>>> ")).lower()
         # returns guest = True if guest is selected
         if logintype in ("user", "guest", "1"):
-            guest = True
-            return admin, guest
+            return False, True
         # returns admin = True if guest is selected
         elif logintype in ("admin", "2"):
-            admin = True
-            return admin, guest
+            return True, False
         else:
             continue
 
@@ -221,7 +219,7 @@ def NameLogin(lists, admin=False):
     while True:
         name = str(input("\nUsername: "))
         # the lists lets this function be used for both admin and guest accounts
-        success = next((True for i in lists if name in i["name"]), False)
+        success = next((True for i in lists if name in lists), False)
         # the next function changes the value of success based on the results
         if success == True:
             if admin:
