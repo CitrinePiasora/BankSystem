@@ -219,8 +219,9 @@ def NameLogin(lists, admin=False):
     while True:
         name = str(input("\nUsername: "))
         # the lists lets this function be used for both admin and guest accounts
-        success = next((True for i in lists if name in lists), False)
+        success = next((True for i in lists if name == i["name"]), False)
         # the next function changes the value of success based on the results
+        
         if success == True:
             if admin:
                 # false is returned so that the new user loop doesn't trigger
