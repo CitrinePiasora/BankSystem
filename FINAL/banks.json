@@ -1,0 +1,18 @@
+{
+  "banks": [
+    {
+      "name": "test",
+      "password": "none"
+    },
+    {
+      "name": "shinobi",
+      "password": "$2b$12$e7AsmqIBptXfFcm/QGfpFOxRJBzvgkBXKc84cmGbjvcPOXpxiRx/6",
+      "hasher": "$2b$12$e7AsmqIBptXfFcm/QGfpFO"
+    },
+	{
+      "name": "hello",
+      "password": "$2b$12$e7AsmqIBptXfFcm/QGfpFOxRJBzvgkBXKc84cmGbjvcPOXpxiRx/6",
+      "hasher": "$2b$12$e7AsmqIBptXfFcm/QGfpFO"
+    }
+  ]
+}
