@@ -152,6 +152,8 @@ while program == True:
                         print(
                             "Thank you for using our services, your account has now been removed"
                         )
+                        # customer is removed
+                        customerdata.removecustomer(cname)
                     else:
                         print(
                             "Rp. %s will be returned to you in cash, your account has now been removed"
