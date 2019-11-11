@@ -182,7 +182,6 @@ while program == True:
         ogpword = str(input("\nOriginal Password: "))
         newpword = bf.Hashed(str(input("New Password: ")), name, banks)
         bf.bankpass(banks, name, ogpword, newpword, filename)
-        print("\nYour password has been changed.")
     elif command in ("7", "quit", "exit"):
         # bank's database is exported into it's database json file
         program = bf.savedata(database, customerdata, customers)
