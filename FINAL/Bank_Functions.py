@@ -176,6 +176,7 @@ def bankpass(banks, name, ogpword, pword, filename):
         # is exported immediately to the bank admin account database
         with open(filename, "w") as f_obj:
             f_obj.write(json.dumps({"banks": banks}, indent=2))
+        print("\nYour password has been changed.")
     else:
         # otherwise it returns a failure message
         print("Error! Original Password is wrong!")
