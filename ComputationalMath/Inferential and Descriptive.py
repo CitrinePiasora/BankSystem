@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import statistics
 
-df = pd.read_csv(r"C:\Users\Citrine\Downloads\Height vs Shoe Size.csv") # change this later
+df = pd.read_csv(r"Height vs Shoe Size.csv") # change this later
 df.fillna(0, inplace = True)
 
 while(True):
@@ -127,10 +127,10 @@ while(True):
             axes[2].set_title("Height Z-Score")
 
             axes[1].hist(b)
-            axes[1].set_title("Shoe Size")
+            axes[1].set_title("Foot Size")
 
             axes[3].hist(stats.zscore(b))
-            axes[3].set_title("Shoe Size Z-Score")
+            axes[3].set_title("Foot Size Z-Score")
 
             plt.show()
 
@@ -141,8 +141,8 @@ while(True):
 
             a = np.array(df['height'])
             b = np.array(df['foot size'])
-            print("\n Z-Score for the first array is : \n", stats.zscore(a))
-            print("\n Z-Score for the second array is : \n", stats.zscore(b))
+            print("\n Z-Score for Height: \n", stats.zscore(a))
+            print("\n Z-Score for Foot Size: \n", stats.zscore(b))
 
             axes[0].hist(stats.zscore(a))
             axes[1].hist(stats.zscore(b))
@@ -153,7 +153,11 @@ while(True):
             a = np.array(df['height'])
             b = np.array(df['foot size'])
 
-            print ("p-val =", stats.ttest_ind(a,b)[1])
+            aZ = stats.zscore(a)
+            bZ = stats.zscore(b)
+
+            print ("P-Value for height is: \n", stats.norm.sf(aZ))
+            print ("P-Value for foot size is: \n", stats.norm.sf(bZ))
 
         elif choice == 5:
             a = np.array(df['height'])
