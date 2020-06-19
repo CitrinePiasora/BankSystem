@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import statistics
 
-df = pd.read_csv(r"Height vs Shoe Size.csv") # change this later
+df = pd.read_csv(r"C:\Users\Djagad P. Dwialam\Desktop\Compmath Project\Height vs Shoe Size.csv") # change this later
 df.fillna(0, inplace = True)
 
 while(True):
@@ -94,7 +94,7 @@ while(True):
             plt.show()
 
     elif choice == 2:
-        print("\nThe Dataset used is Data of Measured Heights and Foot Size:\n1. Pearson's Correlation\n2. Z-Scores\n3. Normal Distribution using Z-Score\n4. p-value\n5. Hypothesis Testing with T-test")
+        print("\nThe Dataset used is Data of Measured Heights and Foot Size:\n1. Pearson's Correlation\n2. Z-Scores\n3. Normal Distribution using Z-Score\n4. Hypothesis Testing with T-test")
 
         choice = eval(input(">>> "))
 
@@ -149,17 +149,9 @@ while(True):
 
             plt.show()
 
+            
+            
         elif choice == 4:
-            a = np.array(df['height'])
-            b = np.array(df['foot size'])
-
-            aZ = stats.zscore(a)
-            bZ = stats.zscore(b)
-
-            print ("P-Value for height is: \n", stats.norm.sf(aZ))
-            print ("P-Value for foot size is: \n", stats.norm.sf(bZ))
-
-        elif choice == 5:
             a = np.array(df['height'])
             b = np.array(df['foot size'])
 
