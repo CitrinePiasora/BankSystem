@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import statistics
 
-df = pd.read_csv(r"C:\Users\Djagad P. Dwialam\Desktop\Compmath Project\Height vs Shoe Size.csv") # change this later
+df = pd.read_csv(r"C:\Users\Citrine\Desktop\School Stuff\Comp Math\Graded Assignment\Height vs Shoe Size.csv") # change this later
 df.fillna(0, inplace = True)
 
 while(True):
@@ -47,7 +47,7 @@ while(True):
 
         elif choice == 3:
 
-            df.plot.scatter(x = 'foot size', y = 'height')
+            df.plot.scatter(x = 'foot size', y = 'height', title="Scatter Plot of Foot Size and Height")
             plt.show()
 
         elif choice == 4:
@@ -66,9 +66,11 @@ while(True):
 
             axes[0].hist(aSamples, density=1, bins=30, edgecolor="cyan", linewidth=0.5, color="magenta")
             axes[0].plot(np.linspace(50, 85), aNorm.pdf(np.linspace(50, 85)), color="yellow", linewidth=5)
-            
+            axes[0].set_title("Height")
+
             axes[1].hist(bSamples, density=1, bins=30, edgecolor="cyan", linewidth=0.5, color="magenta")
             axes[1].plot(np.linspace(3, 15), bNorm.pdf(np.linspace(3, 15)), color="yellow", linewidth=5)
+            axes[1].set_title("Foot Size")
 
             plt.show()
 
@@ -94,7 +96,7 @@ while(True):
             axes[0].set_title("Height")
 
             axes[1].hist(b)
-            axes[0].set_title("Foot Size")
+            axes[1].set_title("Foot Size")
 
             plt.show()
 
@@ -110,10 +112,8 @@ while(True):
             r = np.corrcoef(a, b) 
 
             print("The Correlation between Height and Foot Size is: \n" , r)
-
-            plt.scatter(a, b)
-            plt.ylabel("Foot Size")
-            plt.xlabel("Height")
+            
+            df.plot.scatter(x = 'foot size', y = 'height', title= "Scatter Plot of Foot Size and Height")
             plt.show()
         
         elif choice == 2:
@@ -146,11 +146,15 @@ while(True):
 
             a = np.array(df['height'])
             b = np.array(df['foot size'])
+            
             print("\n Z-Score for Height: \n", stats.zscore(a))
             print("\n Z-Score for Foot Size: \n", stats.zscore(b))
 
             axes[0].hist(stats.zscore(a))
+            axes[0].set_title("Z-Score for Height")
+
             axes[1].hist(stats.zscore(b))
+            axes[1].set_title("Z-Score for Foot Size")
 
             plt.show()
 
