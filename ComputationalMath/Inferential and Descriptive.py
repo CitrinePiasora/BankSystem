@@ -114,6 +114,7 @@ while(True):
         elif choice == 2:
             a = np.array(df['height'])
             b = np.array(df['foot size'])
+            
             print("\n Z-Score for the first array is : \n", stats.zscore(a))
             print("\n Z-Score for the second array is : \n", stats.zscore(b))
             
@@ -141,6 +142,7 @@ while(True):
 
             a = np.array(df['height'])
             b = np.array(df['foot size'])
+            
             print("\n Z-Score for Height: \n", stats.zscore(a))
             print("\n Z-Score for Foot Size: \n", stats.zscore(b))
 
