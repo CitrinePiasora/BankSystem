@@ -81,11 +81,16 @@ while(True):
             print("\nSkew Height: %f\nSkew Foot Size: %f" % (skewHeight, skewSize))
 
         elif choice == 6:
+            fig, axes = plt.subplots(nrows=2)
+            fig.set_size_inches(15, 15)
+
             a = np.array(df['height'])
             b = np.array(df['foot size'])
 
             stats.kurtosis(a)
-            plt.hist(a)
+            axes[0].hist(a)
+            axes[1].hist(b)
+
             plt.show()
 
     elif choice == 2:
@@ -130,7 +135,7 @@ while(True):
             plt.show()
 
         elif choice == 3:
-
+            
             fig, axes = plt.subplots(nrows=2)
             fig.set_size_inches(15, 15)
 
